@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+    <!-- A continuación vamos a poner el encabezado en el que introduciremos los metadatos(diremos que es texto codificado
+     en UTF-8), el título y el icono de la página y enlazaremos este archivo html con la hoja de estilos css y con la de
+     funciones js en javascript-->  
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>Smart Room</title>
+    <link rel="shortcut icon" href="./media/favicon.png">
+	<link rel="stylesheet" href="estilos.css" type="text/css" media="all">
+	<script src="./js/datos.js" language="javascript" type="text/javascript"></script>
+</head>
+    <!-- Dentro del cuerpo de la página crearemos un menú a la izquierda con la imagen de la habitación y el nombre y 
+    los datos del usuario que previamente hemos añadido desde sus respectivas páginas de configuración
+    -->
+    <body>
+	<script>
+		var dispositivo = navigator.userAgent.toLowerCase();
+
+      if( dispositivo.search(/iphone|ipod|ipad|android/) > -1 ){
+
+      window.location = "index_mobile.html";  
+      }
+
+	</script>
+	<div id="izq">    
+            <img id="redondo" src="./media/room.jpg" width="200px" style="margin-top:40px; margin-left: 40px;"/>
+            <div id="user_name"></div>
+            <!-- Aquí creamos contenedores que se llenarán con la información que les pase los scripts de cada dato-->
+            <div id="user">           
+            	<img id="user_icon" src="./media/38-101773_flag-512.png"><div id="user_country"></div>
+            	<img id="user_icon" src="./media/38-94309_apartment-512.png"><div id="user_city"></div>
+            	<img id="user_icon" src="./media/38-96013_compas-512.png"><div id="user_gps"></div>
+            	<!-- A continuación iremos al enlace pasado desde la página de configuración-->
+            	<a id="gmapa"><img id="user_icon" src="./media/38-113077_map_marker-512.png">Google Maps</a>
+            </div>
+            <!-- Los siguientes iconos nos permitirán acceder a las páginas de configuración -->
+            <div id="icons">
+            	<a href="minombre.html"><img id="menu_icon" src="./media/38-92179_edit_user-512.png"/></a>
+            	<a href="config.html"><img id="menu_icon" src="./media/38-107635_settings3-512.png"/></a>
+            </div>
+    </div>
+    <div id="content">
+		<div id="card">
+			<h2>Datos de los sensores</h2>
+			<!-- Mostramos la tabla con los datos de los sensores-->
+          <div id="table">
+            <table id="t_sensores" vertical-align="center" align="center">
+              <tbody>
+                <tr>
+                  <th scope="row"><img id="user_icon" src="media/38-112309_temperature-512.png">Temperatura (º)</th>
+                  <td>25</td>
+                </tr>
+                <tr>
+                  <th scope="row"><img id="user_icon" src="media/38-97069_blur-512.png">Humedad (%)</th>
+                  <td>30</td>
+                </tr>
+                <tr>
+                  <th scope="row"><img id="user_icon" src="media/38-112165_medium_volume-512.png">Nivel de Ruido</th>
+                  <td>115</td>
+                </tr>
+                <tr>
+                  <th scope="row"><img id="user_icon" src="media/38-91885_idea-512.png">Nivel de Luz</th>
+                  <td>225</td>
+                </tr>
+                <tr>
+                  <th scope="row"><img id="user_icon" src="media/38-103357_shoes-512.png">Movimiento</th>
+                  <td>Sí</td>
+                </tr>
+                <tr>
+                  <th scope="row"><img id="user_icon" src="media/38-103981_pain_brush-512.png">Color Iluminación</th>
+                  <td>FF00FF</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+		</div>
+		<!-- El pie de página que redirige a la página web de la universidad de Alcalá-->
+		<a href="www.uah.es"><div id="footer"> Universidad de Alcalá </div></a>
+    </div>
+    <!-- Tras mostrar la página activamos las funciones javascript que introducirán los datos en sus 
+    respectivos contenedores-->
+    <script>
+	    PonerNombre();
+	    PonerDatos();
+	</script>
+    </body>  
+    
+</html>

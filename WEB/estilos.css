@@ -1,0 +1,115 @@
+            body{
+	            background-image: url('./media/fondo.png');
+	            background-repeat: repeat-x-y ;
+	            font-family: "Roboto";
+            }
+            #izq{
+                width: 300px;
+                height: 100%;
+                background-color: white;
+                float: left;
+                margin-top: -10px;
+                margin-left: 50px;
+                position: fixed;
+            }
+            #content{
+                margin-left: 418px;
+                padding-top: 50px;
+                height: auto;	                
+		        margin-right: 58px;
+            }
+            #redondo{
+                border: 5px solid #CBCBCB;
+                padding: 0;
+                border-radius: 800px;
+                overflow: hidden;
+                text-align: center;
+            }
+            #user_name{
+                text-align: center;
+                font-family: "Roboto";
+                font-size: 35px;
+                color: #CBCBCB;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+            #user{
+                text-align:left;
+                margin-left: 70px;
+                line-height: 25px;
+                
+            }
+            #user li{
+	            list-style: none;
+	            margin-bottom: 10px;
+            }
+	        #card{
+		        padding: 20px 0px 20px 0px;
+		        background-color: white;
+		        float:center;
+		        text-align: center;
+		        border-radius: 15px;
+		        margin-bottom: 50px;
+		    }
+		    #icons{
+		    	margin-left: 65px;
+		    	margin-top: 80px;
+		    }
+		    #menu_icon{
+			    width: 75px;
+			    margin-right: 20px;
+		    }
+		    #user_icon{
+			    width: 15px;
+			    float: left;
+			    margin-right: 15px;
+			    padding-top: 5px;
+		    }
+		    #t_sensores{
+			    width: 400px;
+			    line-height: 30px;
+		    }
+		    #t_config_datos{
+			    width: 400px;
+			    line-height: 30px;
+		    }
+		    #t_config_sensores{
+			    width: 200px;
+			    line-height: 30px;
+		    }
+		    #t_config_temp{
+			    width: 400px;
+			    line-height: 30px;
+		    }
+		    #t_nombre{
+			    width: 400px;
+			    line-height: 30px;
+		    }
+		    #footer{
+			    width: 280px;
+			    padding: 10px 0px 10px 0px;
+			    background-color: white;
+			    float:none;
+			    margin: 0 auto;
+			    text-align: center;
+			    border-radius: 15px;
+			    margin-bottom: 50px;
+			    font-size: 10px;
+			    font-style: italic;
+			}
+            #user_titles{
+                text
+            }
+            #user li{
+	           
+                 list-style: none;
+	         margin-bottom: 10px;
+	         }
+
+	/*Añadimos la fuente que previamente hemos incluido en nuestro directorio*/
+	@font-face {
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: normal;
+	src: local("?"), url("./fonts/Roboto-Light.ttf") format("truetype");
+}	

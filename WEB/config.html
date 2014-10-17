@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html manifest="manifest.appcache">
+<head>
+        <meta content="text/html; charset=utf-8" http-equiv="content-type">
+        <title>Configuración [Smart Room]</title>
+        <link rel="shortcut icon" href="./media/favicon.png">
+	<link rel="stylesheet" href="estilos.css" type="text/css" media="all">
+	<script src="./js/datos.js" language="javascript" type="text/javascript"></script>			
+    </head>
+          
+<body>
+
+    <div id="izq">    
+            <img id="redondo" src="./media/38-100822_settings-512.png" width="200px" style="margin-top:40px; margin-left: 40px;"/>
+            <div id="user_name">Configuración</div>
+            <div id="icons">            	
+            	<a href="index.html"><img id="menu_icon" src="./media/38-101587_home-512.png"/></a>
+            	<a href="minombre.html"><img id="menu_icon" src="./media/38-92179_edit_user-512.png"/></a>
+            </div>
+    </div>
+	<div id="content">
+    <div id="card">
+        <!-- Creamos un formulario para introducir los datos -->
+        <h2>Datos de la habitación</h2>
+        <!-- Datalist que añadirá facilidad a la hora de buscar el país-->  
+        <div id="table">
+        	<table id="t_config_datos" vertical-align="center" align="center">
+              <tbody>
+                <tr>
+                  <th id="pais" scope="row">País:</th>
+                  <td>
+	                  <input list="paises" id="country"> 
+	                  	<datalist id="paises">
+		                	<option value="Albania">
+							<option value="Alemania">
+							<option value="Andorra">
+							<option value="Armenia">
+							<option value="Austria">
+							<option value="Azerbaiyán">
+							<option value="Bélgica">
+							<option value="Bielorrusia">
+							<option value="Bosnia-Herzegovina">
+							<option value="Bulgaria">
+							<option value="Chipre">
+							<option value="Ciudad del Vaticano">
+							<option value="Croacia">
+							<option value="Dinamarca">
+							<option value="Eslovaquia">
+							<option value="Eslovenia">
+							<option value="España">
+							<option value="Estonia">
+							<option value="Finlandia">
+							<option value="Francia">
+							<option value="Georgia">
+							<option value="Grecia">
+							<option value="Hungría">
+							<option value="Irlanda">
+							<option value="Islandia">
+							<option value="Italia">
+							<option value="Kazajistán">
+							<option value="Letonia">
+							<option value="Liechtenstein">
+							<option value="Lituania">
+							<option value="Luxemburgo">
+							<option value="Malta">
+							<option value="Moldavia">
+							<option value="Mónaco">
+							<option value="Montenegro">
+							<option value="Noruega">
+							<option value="Países Bajos">
+							<option value="Polonia">
+							<option value="Portugal">
+							<option value="Reino Unido">
+							<option value="República Checa">
+							<option value="República de Macedonia">
+							<option value="Rumanía">
+							<option value="Rusia">
+							<option value="San Marino">
+							<option value="Serbia">
+							<option value="Suecia">
+							<option value="Suiza">
+							<option value="Turquía">
+							<option value="Ucrania">
+						</datalist>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Ciudad:</th>
+                  <td><input id="city" type="text" name="city"></td>
+                </tr>
+                <tr>
+                  <th scope="row">Coordenadas GPS:</th>
+                  <td><input id="gps" type="text" name="gps"></td>
+                </tr>
+                <tr>
+                  <th scope="row">Mapa URL:</th>
+                  <td><input id="maps" type="url" name="url"></td>
+                </tr>
+                <tr>
+                  <th scope="row">Foto:</th>
+                  <td><input id="file1" type="file" accept="image/gif, image/jpeg, image/png" name="file1"></td>
+                </tr>
+                <tr>
+                  <th scope="row">Password:</th>
+                  <td><input id="pass" name="pass" type="password"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- El siguiente botón mandará todos los datos a la función javascript-->
+
+          <input value="Enviar datos" onclick="GuardarDatos()"   type ="button">
+      </div>
+     
+     
+      <div id="card">
+	    <h2>Seleccione los sensores</h2>
+        <!-- Formulario checkbox para seleccionar las opciones necesarias-->  
+	    <div id="table">
+        	<table id="t_config_sensores" vertical-align="center" align="center">
+              <tbody>
+                <tr>
+                  <th scope="row"><input type="checkbox" id="sensores" value="temperature"></th>
+                  <td>Temperatura</td>
+                </tr>
+                <tr>
+                  <th scope="row"><input type="checkbox" id="sensores" value="humidity"></th>
+                  <td>Humedad</td>
+                </tr>
+                <tr>
+                  <th scope="row"><input type="checkbox" id="sensores" value="sound"></th>
+                  <td>Nivel de Sonido</td>
+                </tr>
+                <tr>
+                  <th scope="row"><input type="checkbox" id="sensores" value="light"></th>
+                  <td>Nivel de Luz</td>
+                </tr>
+                <tr>
+                  <th scope="row"><input type="checkbox" id="sensores" value="movement"></th>
+                  <td>Movimiento</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+      </div>
+      
+      <div id="card">
+	    <h2>Configure Alertas</h2>
+        <!-- El siguiente formulario introducirá las temperaturas máximas y mínimas(dentro de un margen
+	    estipulado y nos mostrará la diferencia de temeperatura entre ellas--> 
+	    <form onsubmit="return false" oninput="o.value = parseInt(a.value) - parseInt(b.value)">
+	    <div id="table">
+        	<table id="t_config_temp" vertical-align="center" align="center">
+              <tbody>
+                <tr>
+                  <th scope="row">Temperatura Máxima</th>
+                  <td><input id="temp_max" name="a" type="number" step="any"></td>
+                </tr>
+                <tr>
+                  <th scope="row">Temperatura Mínima</th>
+                  <td><input id="temp_min" name="b" type="number" step="any"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div></br>
+          Diferencia de <output id="temp_dif" name="o"></output> ºC
+          </form>
+      </div>
+    
+    <div id="footer"> Universidad de Alcalá </div>
+  </body>
+</html>

@@ -1,0 +1,107 @@
+body{
+	background-image: url('./media/fondo.png');
+	background-repeat: repeat-x-y ;
+	font-family: "Roboto";
+	font-size: 30px;
+}
+#top{
+	background-color: white;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	text-align: center;
+	border-radius: 25px;
+}
+.izq{
+	float:left;
+	width: 50%;
+}
+.der{
+	float:right;
+	width: 50%;
+}
+	        #card{
+		        padding: 20px 0px 20px 0px;
+		        background-color: white;
+		        text-align: center;
+		        border-radius: 15px;
+		        margin-top: 30px;
+		    }
+		    #t_sensores{
+			    width: 550px;
+			    line-height: 55px;
+		    }
+		    #t_config_datos{
+			    width: 550px;
+			    line-height: 55px;
+		    }
+		    #t_config_sensores{
+			    width: 300px;
+			    line-height: 55px;
+		    }
+		    #t_config_temp{
+			    padding-top:50px;
+			    padding-bottom: 50px;
+			    width: 550px;
+			    line-height: 55px;
+		    }
+		    #enviar{
+			    text-align: center;
+			    margin-left: 300px;
+		    }
+#redondo{
+    border: 5px solid #CBCBCB;
+    padding: 0;
+    width: 300px;
+    border-radius: 800px;
+    overflow: hidden;
+    text-align: center;
+/*     margin: auto;
+    position: relative;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;*/
+}
+#icons{
+	margin-right: 65px;
+	padding-bottom: 62px;
+}
+#menu_icon{
+	width: 35px;
+	margin:0 25px 0 65px;;
+}
+            #user{
+                text-align:left;
+                margin: 45px 0 45px 380px;
+                line-height: 55px;
+                }
+		    #user_icon{
+			    width: 35px;
+			    float: left;
+			    margin-right: 15px;
+			    padding-top: 5px;
+		    }
+#user_name{
+	font-size: 70px;
+	color: #CBCBCB;
+}
+#title{
+	font-size: 70px;
+	color: #CBCBCB;
+}
+#nombre{
+	padding-bottom: 32px;
+}
+		    #footer{
+			    width: 540px;
+			    padding: 10px 0px 10px 0px;
+			    background-color: white;
+			    float:none;
+			    margin: 0 auto;
+			    text-align: center;
+			    border-radius: 15px;
+			    margin-bottom: 50px;
+			    margin-top: 30px;
+			    font-size: 30px;
+			    font-style: italic;
+			}

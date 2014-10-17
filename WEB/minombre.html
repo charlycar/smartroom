@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html manifest="manifest.appcache">  
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+        <title>Mi Nombre [Smart Room]</title>
+	<link rel="stylesheet" href="estilos.css" type="text/css" media="all">
+	<script src="./js/datos.js" language="javascript" type="text/javascript"></script>
+        <link rel="shortcut icon" href="./media/favicon.png">
+</head>
+  <body>
+    <div id="izq">    
+            <img id="redondo" src="./media/38-102358_user_male3-512.png" width="200px" style="margin-top:40px; margin-left: 40px;"/>
+            <div id="user_name">¡Hola!</div>
+            <div id="user">           
+            	<div id="user_country"></div>
+		<div id="user_city"></div>
+		<div id="user_gps"></div>
+		<div id="user_maps"></div>
+            </div>
+            <div id="icons">            	
+            	<a href="index.html"><img id="menu_icon" src="./media/38-101587_home-512.png"/></a>
+            	<a href="config.html"><img id="menu_icon" src="./media/38-107635_settings3-512.png"/></a>
+            </div>
+    </div>
+    <div id="content">
+		<div id="card">
+      
+                  <h2>Introduzca sus datos de usuario:</h2>
+                  
+        	<table id="t_nombre" vertical-align="center" align="center">
+              <tbody>
+                <tr>
+                  <th scope="row">Nombre</th>
+                  <td><input id="name" name="name" type="text"></td>
+                </tr>
+                <tr>
+                  <th scope="row">Email</th>
+                  <td><input id="email" name="name" type="text"></td>
+                </tr>
+                <tr>
+                  <th scope="row">Pass</th>
+                  <td><input id="pass_pedida" name="name" type="text"></td>
+                </tr>
+              </tbody>
+            </table>
+          <!-- Llamamos a la función encargada de guardar el nombre tras hacer click-->    
+          <input value="Enviar" onclick="GuardarNombre()"   type ="button">	
+          </div>
+          
+      
+
+          
+          
+            
+       </div>
+
+    <div id="footer"> Universidad de Alcalá </div>
+    </div>
+    
+  </body>
+</html>

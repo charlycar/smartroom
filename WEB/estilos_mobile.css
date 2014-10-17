@@ -1,0 +1,29 @@
+body{
+	background-image: url('./media/fondo.png');
+	background-repeat: repeat-x-y ;
+	font-family: "Roboto";
+}
+#top{
+	background-color: white;
+	margin-top: 30px;
+	padding-bottom: -10%;
+	text-align: center;
+}
+#redondo{
+    border: 5px solid white;
+    padding: 0;
+    width: 40%;
+    margin: auto;
+    border-radius: 800px;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+top:0;
+left:0;
+right:0;
+bottom:0;
+}
+#menu_icon{
+	width: 20%;
+	margin: 0;
+}

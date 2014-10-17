@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+    <!-- A continuación vamos a poner el encabezado en el que introduciremos los metadatos(diremos que es texto codificado
+     en UTF-8), el título y el icono de la página y enlazaremos este archivo html con la hoja de estilos css y con la de
+     funciones js en javascript-->  
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>Smart Room</title>
+    <link rel="shortcut icon" href="./media/favicon.png">
+	<link rel="stylesheet" href="estilos_movil.css" type="text/css" media="all">
+	<script src="./js/datos.js" language="javascript" type="text/javascript"></script>
+
+</head>
+<body>
+	<div id="top">
+		<div class="izq"style="width: 35%;">
+			<img id="redondo" style="width: 300px;" src="./media/logo_mc2_2.png">
+		</div>
+		<div id="user_name" style="padding: 60px 0 60px 0;"></div>
+		 <div id="icons">
+            	<a href="minombre_mobile.html"><img id="menu_icon" src="./media/38-92173_edit_user-512.png"/>Nombre</a>
+            	<a href="config_mobile.html"><img id="menu_icon" src="./media/38-107629_settings3-512.png"/>Configuración</a>
+            </div>	
+	</div>
+	
+	<div id="card" style="">    
+        <div class="izq"style="width: 35%;">
+        	<img id="redondo" src="./media/room.jpg">
+        </div>
+        <!-- Aquí creamos contenedores que se llenarán con la información que les pase los scripts de cada dato-->
+        <div id="user">           
+            <img id="user_icon" src="./media/38-101773_flag-512.png"><div id="user_country"></div>
+            <img id="user_icon" src="./media/38-94309_apartment-512.png"><div id="user_city"></div>
+            <img id="user_icon" src="./media/38-96013_compas-512.png"><div id="user_gps"></div>
+            <!-- A continuación iremos al enlace pasado desde la página de configuración-->
+            <a id="gmapa"><img id="user_icon" src="./media/38-113077_map_marker-512.png">Google Maps</a>
+        </div>    
+	</div>
+    
+    <div id="card">
+		<div class="izq"style="width: 35%;">
+        	<img id="redondo" src="./media/datos_sensores.png">
+        </div>
+        <!-- Mostramos la tabla con los datos de los sensores-->
+        <div id="table">
+        	<table id="t_sensores" vertical-align="center" align="center">
+              <tbody>
+                <tr>
+                  <th scope="row"><img id="user_icon" src="media/38-112309_temperature-512.png">Temperatura (º)</th>
+                  <td>25</td>
+                </tr>
+                <tr>
+                  <th scope="row"><img id="user_icon" src="media/38-97069_blur-512.png">Humedad (%)</th>
+                  <td>30</td>
+                </tr>
+                <tr>
+                  <th scope="row"><img id="user_icon" src="media/38-112165_medium_volume-512.png">Nivel de Ruido</th>
+                  <td>115</td>
+                </tr>
+                <tr>
+                  <th scope="row"><img id="user_icon" src="media/38-91885_idea-512.png">Nivel de Luz</th>
+                  <td>225</td>
+                </tr>
+                <tr>
+                  <th scope="row"><img id="user_icon" src="media/38-103357_shoes-512.png">Movimiento</th>
+                  <td>Sí</td>
+                </tr>
+                <tr>
+                  <th scope="row"><img id="user_icon" src="media/38-103981_pain_brush-512.png">Color Iluminación</th>
+                  <td>FF00FF</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+		</div>
+        <a href="www.uah.es"><div id="footer"> Universidad de Alcalá </div></a>
+        
+            
+            
+            
+    <script>
+	    PonerNombre();
+	    PonerDatos();
+	</script>
+    
+</body>
+</html>
